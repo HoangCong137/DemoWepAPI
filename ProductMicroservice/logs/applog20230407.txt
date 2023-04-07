@@ -1,0 +1,522 @@
+2023-04-07 16:29:06.223 +07:00 [FTL] Application startup exception
+System.InvalidOperationException: EndpointRoutingMiddleware matches endpoints setup by EndpointMiddleware and so must be added to the request execution pipeline before EndpointMiddleware. Please add EndpointRoutingMiddleware by calling 'IApplicationBuilder.UseRouting' inside the call to 'Configure(...)' in the application startup code.
+   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.VerifyEndpointRoutingMiddlewareIsRegistered(IApplicationBuilder app, IEndpointRouteBuilder& endpointRouteBuilder)
+   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder builder, Action`1 configure)
+   at ProductMicroservice.Startup.Configure(IApplicationBuilder app, IWebHostEnvironment env) in C:\Users\caoxu\source\repos\ProductMicroservice\ProductMicroservice\Startup.cs:line 41
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.WebTools.BrowserLink.Net.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.HostingStartup.<>c__DisplayClass1_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2023-04-07 16:31:56.400 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-07 16:31:56.432 +07:00 [INF] Hosting environment: Development
+2023-04-07 16:31:56.431 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger - -
+2023-04-07 16:31:56.433 +07:00 [INF] Content root path: C:\Users\caoxu\source\repos\ProductMicroservice\ProductMicroservice
+2023-04-07 16:31:56.550 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/index.html - -
+2023-04-07 16:31:56.553 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger - - - 301 - - 125.0980ms
+2023-04-07 16:31:56.884 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/index.html - - - 200 - text/html;charset=utf-8 333.1121ms
+2023-04-07 16:31:56.924 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/swagger-ui.css - -
+2023-04-07 16:31:56.924 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/swagger-ui-bundle.js - -
+2023-04-07 16:31:56.927 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/swagger-ui-standalone-preset.js - -
+2023-04-07 16:31:56.928 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 16:31:56.934 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 3.4127ms
+2023-04-07 16:31:56.950 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-07 16:31:56.950 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-07 16:31:56.953 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/swagger-ui.css - - - 200 143632 text/css 29.5967ms
+2023-04-07 16:31:56.955 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-07 16:31:56.962 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 34.7840ms
+2023-04-07 16:31:56.968 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/_vs/browserLink - -
+2023-04-07 16:31:56.998 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 73.2583ms
+2023-04-07 16:31:57.077 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 109.1497ms
+2023-04-07 16:31:57.257 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/v1/swagger.json - -
+2023-04-07 16:31:57.285 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/favicon-32x32.png - -
+2023-04-07 16:31:57.286 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-04-07 16:31:57.287 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/favicon-32x32.png - - - 200 628 image/png 1.3578ms
+2023-04-07 16:31:57.381 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.2229ms
+2023-04-07 16:32:12.985 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product - -
+2023-04-07 16:32:12.992 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:32:13.014 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:32:14.076 +07:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-04-07 16:32:15.809 +07:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+2023-04-07 16:32:15.829 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductMicroservice.Models.Product, ProductMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 16:32:15.849 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 2830.6784ms
+2023-04-07 16:32:15.849 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:32:15.855 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product - - - 200 - application/json;+charset=utf-8 2870.2420ms
+2023-04-07 16:32:35.688 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/index.html - -
+2023-04-07 16:32:35.701 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/index.html - - - 200 - text/html;charset=utf-8 12.6998ms
+2023-04-07 16:32:35.787 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/_vs/browserLink - -
+2023-04-07 16:32:35.796 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 16:32:35.799 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 2.4089ms
+2023-04-07 16:32:35.841 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.0148ms
+2023-04-07 16:32:36.302 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/v1/swagger.json - -
+2023-04-07 16:32:36.306 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.2002ms
+2023-04-07 16:32:43.058 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product - -
+2023-04-07 16:32:43.059 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:32:43.059 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:32:43.086 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+2023-04-07 16:32:43.088 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductMicroservice.Models.Product, ProductMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 16:32:43.088 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 29.0422ms
+2023-04-07 16:32:43.088 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:32:43.088 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product - - - 200 - application/json;+charset=utf-8 30.5246ms
+2023-04-07 16:33:44.925 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:22363/api/Product application/json 116
+2023-04-07 16:33:44.926 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice)'
+2023-04-07 16:33:44.947 +07:00 [INF] Route matched with {action = "Post", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ProductMicroservice.Models.Product) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:33:45.301 +07:00 [ERR] Failed executing DbCommand (91ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Product_ID], [Category_ID], [Description], [Name], [Price])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-04-07 16:33:45.337 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'ProductMicroservice.DBContexts.ProductDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Products' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:5b7545de-26c8-417e-9682-747f5764196d
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Products' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:5b7545de-26c8-417e-9682-747f5764196d
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2023-04-07 16:33:45.344 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice) in 397.5438ms
+2023-04-07 16:33:45.345 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice)'
+2023-04-07 16:33:45.350 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Products' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:5b7545de-26c8-417e-9682-747f5764196d
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ProductMicroservice.Repository.ProductRepository.Save() in C:\Users\caoxu\source\repos\ProductMicroservice\ProductMicroservice\Repository\ProductRepository.cs:line 38
+   at ProductMicroservice.Repository.ProductRepository.InsertProduct(Product product) in C:\Users\caoxu\source\repos\ProductMicroservice\ProductMicroservice\Repository\ProductRepository.cs:line 33
+   at ProductMicroservice.Controllers.ProductController.Post(Product product) in C:\Users\caoxu\source\repos\ProductMicroservice\ProductMicroservice\Controllers\ProductController.cs:line 41
+   at lambda_method15(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-07 16:33:45.392 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:22363/api/Product application/json 116 - 500 - text/plain;+charset=utf-8 466.5721ms
+2023-04-07 16:33:51.865 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product - -
+2023-04-07 16:33:51.867 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:33:51.867 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:33:51.877 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+2023-04-07 16:33:51.878 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductMicroservice.Models.Product, ProductMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 16:33:51.879 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 11.7397ms
+2023-04-07 16:33:51.879 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:33:51.879 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product - - - 200 - application/json;+charset=utf-8 14.7268ms
+2023-04-07 16:33:52.119 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/favicon.ico - -
+2023-04-07 16:33:52.120 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/favicon.ico - - - 404 - - 0.5791ms
+2023-04-07 16:34:01.641 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/index.html - -
+2023-04-07 16:34:01.659 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/index.html - - - 200 - text/html;charset=utf-8 18.2653ms
+2023-04-07 16:34:01.749 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 16:34:01.755 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 6.0118ms
+2023-04-07 16:34:01.755 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/_vs/browserLink - -
+2023-04-07 16:34:01.799 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.9213ms
+2023-04-07 16:34:01.991 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/v1/swagger.json - -
+2023-04-07 16:34:01.993 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.6630ms
+2023-04-07 16:52:25.607 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:22363/api/Product application/json 110
+2023-04-07 16:52:25.626 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice)'
+2023-04-07 16:52:25.630 +07:00 [INF] Route matched with {action = "Post", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ProductMicroservice.Models.Product) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:52:25.835 +07:00 [INF] Executed DbCommand (50ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Category_ID], [Description], [Name], [Price])
+OUTPUT INSERTED.[Product_ID]
+VALUES (@p0, @p1, @p2, @p3);
+2023-04-07 16:52:25.890 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:52:25.940 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice) in 309.8697ms
+2023-04-07 16:52:25.940 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice)'
+2023-04-07 16:52:25.940 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:22363/api/Product application/json 110 - 201 - application/json;+charset=utf-8 337.5396ms
+2023-04-07 16:53:32.211 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:22363/api/Product application/json 107
+2023-04-07 16:53:32.211 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice)'
+2023-04-07 16:53:32.211 +07:00 [INF] Route matched with {action = "Post", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(ProductMicroservice.Models.Product) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:53:32.223 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Category_ID], [Description], [Name], [Price])
+OUTPUT INSERTED.[Product_ID]
+VALUES (@p0, @p1, @p2, @p3);
+2023-04-07 16:53:32.225 +07:00 [INF] Executing CreatedAtActionResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:53:32.226 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice) in 15.2252ms
+2023-04-07 16:53:32.226 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Post (ProductMicroservice)'
+2023-04-07 16:53:32.227 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:22363/api/Product application/json 107 - 201 - application/json;+charset=utf-8 15.9783ms
+2023-04-07 16:54:12.216 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/1 - -
+2023-04-07 16:54:12.217 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:12.221 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:12.423 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:12.431 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:12.432 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 210.4288ms
+2023-04-07 16:54:12.432 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:12.432 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/1 - - - 200 - application/json;+charset=utf-8 215.6013ms
+2023-04-07 16:54:15.937 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/2 - -
+2023-04-07 16:54:15.937 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:15.937 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:15.953 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:15.953 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:15.953 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 16.1773ms
+2023-04-07 16:54:15.953 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:15.953 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/2 - - - 200 - application/json;+charset=utf-8 16.7439ms
+2023-04-07 16:54:19.625 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/1 - -
+2023-04-07 16:54:19.626 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:19.626 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:19.630 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:19.630 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:19.630 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 4.4044ms
+2023-04-07 16:54:19.630 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:19.630 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/1 - - - 200 - application/json;+charset=utf-8 4.9915ms
+2023-04-07 16:54:22.514 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/2 - -
+2023-04-07 16:54:22.514 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:22.514 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:22.530 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:22.530 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:22.531 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 16.6361ms
+2023-04-07 16:54:22.531 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:22.531 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/2 - - - 200 - application/json;+charset=utf-8 17.3346ms
+2023-04-07 16:54:25.254 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/1 - -
+2023-04-07 16:54:25.255 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:25.255 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:25.258 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:25.259 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:25.259 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 4.2315ms
+2023-04-07 16:54:25.259 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:25.259 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/1 - - - 200 - application/json;+charset=utf-8 5.4608ms
+2023-04-07 16:54:27.950 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/2 - -
+2023-04-07 16:54:27.964 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:27.964 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:27.966 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:27.966 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:27.966 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 2.5272ms
+2023-04-07 16:54:27.966 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:27.966 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/2 - - - 200 - application/json;+charset=utf-8 16.6702ms
+2023-04-07 16:54:30.449 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/1 - -
+2023-04-07 16:54:30.450 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:30.450 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:30.452 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:30.452 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:30.452 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 2.2984ms
+2023-04-07 16:54:30.452 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:30.452 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/1 - - - 200 - application/json;+charset=utf-8 2.8268ms
+2023-04-07 16:54:33.294 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/2 - -
+2023-04-07 16:54:33.294 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:33.294 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:33.298 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:33.299 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:33.299 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 5.0305ms
+2023-04-07 16:54:33.299 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:33.300 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/2 - - - 200 - application/json;+charset=utf-8 5.7568ms
+2023-04-07 16:54:36.445 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/1 - -
+2023-04-07 16:54:36.445 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:36.445 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:36.450 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:36.450 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:36.451 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 5.887ms
+2023-04-07 16:54:36.451 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:36.451 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/1 - - - 200 - application/json;+charset=utf-8 6.5815ms
+2023-04-07 16:54:40.449 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/2 - -
+2023-04-07 16:54:40.450 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:40.450 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:40.451 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:40.452 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:40.452 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 2.2269ms
+2023-04-07 16:54:40.452 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:40.452 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/2 - - - 200 - application/json;+charset=utf-8 2.7954ms
+2023-04-07 16:54:43.868 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product/1 - -
+2023-04-07 16:54:43.868 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:43.868 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:54:43.872 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:54:43.872 +07:00 [INF] Executing OkObjectResult, writing value of type 'ProductMicroservice.Models.Product'.
+2023-04-07 16:54:43.873 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 4.696ms
+2023-04-07 16:54:43.873 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:54:43.873 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product/1 - - - 200 - application/json;+charset=utf-8 5.3629ms
+2023-04-07 16:55:04.044 +07:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:22363/api/Product/1 - -
+2023-04-07 16:55:04.045 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Delete (ProductMicroservice)'
+2023-04-07 16:55:04.046 +07:00 [INF] Route matched with {action = "Delete", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(Int32) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:55:04.052 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+WHERE [p].[Product_ID] = @__p_0
+2023-04-07 16:55:04.080 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Products]
+OUTPUT 1
+WHERE [Product_ID] = @p0;
+2023-04-07 16:55:04.090 +07:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-04-07 16:55:04.091 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Delete (ProductMicroservice) in 44.0373ms
+2023-04-07 16:55:04.091 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Delete (ProductMicroservice)'
+2023-04-07 16:55:04.091 +07:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:22363/api/Product/1 - - - 200 - - 46.7878ms
+2023-04-07 16:55:33.209 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product - -
+2023-04-07 16:55:33.210 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:55:33.210 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:55:33.226 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+2023-04-07 16:55:33.227 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductMicroservice.Models.Product, ProductMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 16:55:33.228 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 17.9971ms
+2023-04-07 16:55:33.228 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:55:33.228 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product - - - 200 - application/json;+charset=utf-8 18.8080ms
+2023-04-07 16:56:16.818 +07:00 [INF] Request starting HTTP/1.1 PUT http://localhost:22363/api/Product/2 text/plain 158
+2023-04-07 16:56:16.818 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice)'
+2023-04-07 16:56:16.819 +07:00 [INF] Route matched with {action = "Put", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Put(ProductMicroservice.Models.Product) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:56:16.825 +07:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-04-07 16:56:16.829 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice) in 10.2002ms
+2023-04-07 16:56:16.829 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice)'
+2023-04-07 16:56:16.830 +07:00 [INF] Request finished HTTP/1.1 PUT http://localhost:22363/api/Product/2 text/plain 158 - 415 - application/problem+json;+charset=utf-8 11.8186ms
+2023-04-07 16:57:11.102 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/api/Product text/plain 151
+2023-04-07 16:57:11.103 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:57:11.103 +07:00 [INF] Route matched with {action = "Get", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:57:11.109 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Product_ID], [p].[Category_ID], [p].[Description], [p].[Name], [p].[Price]
+FROM [Products] AS [p]
+2023-04-07 16:57:11.110 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductMicroservice.Models.Product, ProductMicroservice, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-07 16:57:11.110 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice) in 7.1824ms
+2023-04-07 16:57:11.110 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Get (ProductMicroservice)'
+2023-04-07 16:57:11.110 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/api/Product text/plain 151 - 200 - application/json;+charset=utf-8 8.0016ms
+2023-04-07 16:58:01.500 +07:00 [INF] Request starting HTTP/1.1 PUT http://localhost:22363/api/Product application/json 151
+2023-04-07 16:58:01.501 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-04-07 16:58:01.501 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-04-07 16:58:01.501 +07:00 [INF] Request finished HTTP/1.1 PUT http://localhost:22363/api/Product application/json 151 - 405 - - 1.2378ms
+2023-04-07 16:59:02.639 +07:00 [INF] Request starting HTTP/1.1 PUT http://localhost:22363/api/Product/2 application/json 151
+2023-04-07 16:59:02.639 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice)'
+2023-04-07 16:59:02.639 +07:00 [INF] Route matched with {action = "Put", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Put(ProductMicroservice.Models.Product) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:59:02.662 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [Category_ID] = @p0, [Description] = @p1, [Name] = @p2, [Price] = @p3
+OUTPUT 1
+WHERE [Product_ID] = @p4;
+2023-04-07 16:59:02.669 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'ProductMicroservice.DBContexts.ProductDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnly(Int32 commandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnly(Int32 commandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2023-04-07 16:59:02.669 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice) in 29.7765ms
+2023-04-07 16:59:02.669 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice)'
+2023-04-07 16:59:02.670 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnly(Int32 commandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__107_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at ProductMicroservice.Repository.ProductRepository.Save() in C:\Users\caoxu\source\repos\ProductMicroservice\ProductMicroservice\Repository\ProductRepository.cs:line 38
+   at ProductMicroservice.Repository.ProductRepository.UpdateProduct(Product product) in C:\Users\caoxu\source\repos\ProductMicroservice\ProductMicroservice\Repository\ProductRepository.cs:line 44
+   at ProductMicroservice.Controllers.ProductController.Put(Product product) in C:\Users\caoxu\source\repos\ProductMicroservice\ProductMicroservice\Controllers\ProductController.cs:line 54
+   at lambda_method86(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-04-07 16:59:02.673 +07:00 [INF] Request finished HTTP/1.1 PUT http://localhost:22363/api/Product/2 application/json 151 - 500 - text/plain;+charset=utf-8 34.1941ms
+2023-04-07 16:59:12.721 +07:00 [INF] Request starting HTTP/1.1 PUT http://localhost:22363/api/Product/2 application/json 151
+2023-04-07 16:59:12.722 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice)'
+2023-04-07 16:59:12.722 +07:00 [INF] Route matched with {action = "Put", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Put(ProductMicroservice.Models.Product) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:59:12.735 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [Category_ID] = @p0, [Description] = @p1, [Name] = @p2, [Price] = @p3
+OUTPUT 1
+WHERE [Product_ID] = @p4;
+2023-04-07 16:59:12.735 +07:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-04-07 16:59:12.735 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice) in 13.7522ms
+2023-04-07 16:59:12.735 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice)'
+2023-04-07 16:59:12.736 +07:00 [INF] Request finished HTTP/1.1 PUT http://localhost:22363/api/Product/2 application/json 151 - 200 - - 14.5956ms
+2023-04-07 16:59:25.949 +07:00 [INF] Request starting HTTP/1.1 PUT http://localhost:22363/api/Product/2 application/json 156
+2023-04-07 16:59:25.949 +07:00 [INF] Executing endpoint 'ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice)'
+2023-04-07 16:59:25.949 +07:00 [INF] Route matched with {action = "Put", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Put(ProductMicroservice.Models.Product) on controller ProductMicroservice.Controllers.ProductController (ProductMicroservice).
+2023-04-07 16:59:26.140 +07:00 [INF] Executed DbCommand (189ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Products] SET [Category_ID] = @p0, [Description] = @p1, [Name] = @p2, [Price] = @p3
+OUTPUT 1
+WHERE [Product_ID] = @p4;
+2023-04-07 16:59:26.141 +07:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2023-04-07 16:59:26.141 +07:00 [INF] Executed action ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice) in 192.2332ms
+2023-04-07 16:59:26.141 +07:00 [INF] Executed endpoint 'ProductMicroservice.Controllers.ProductController.Put (ProductMicroservice)'
+2023-04-07 16:59:26.142 +07:00 [INF] Request finished HTTP/1.1 PUT http://localhost:22363/api/Product/2 application/json 156 - 200 - - 193.2432ms
+2023-04-07 16:59:55.710 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/index.html - -
+2023-04-07 16:59:55.728 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/index.html - - - 200 - text/html;charset=utf-8 18.8569ms
+2023-04-07 16:59:55.797 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/_framework/aspnetcore-browser-refresh.js - -
+2023-04-07 16:59:55.799 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 1.9916ms
+2023-04-07 16:59:55.808 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/_vs/browserLink - -
+2023-04-07 16:59:55.858 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.3031ms
+2023-04-07 16:59:56.028 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:22363/swagger/v1/swagger.json - -
+2023-04-07 16:59:56.040 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:22363/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.9538ms
